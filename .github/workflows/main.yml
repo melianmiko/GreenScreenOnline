@@ -1,0 +1,17 @@
+name: remote ssh command
+on: [push]
+jobs:
+
+  deploy:
+    name: Fetch sources on server and build image
+    runs-on: ubuntu-latest
+    steps:
+    - name: Rebuild
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          cd ~/GreenScreenApp && docker compose build
+          cd ~/www && docker compose up -d
