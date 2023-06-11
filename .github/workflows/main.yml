@@ -13,5 +13,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          cd ~/GreenScreenApp && docker compose build
+          cd ~/GreenScreenOnline && git pull && docker compose build
           cd ~/www && docker compose up -d
