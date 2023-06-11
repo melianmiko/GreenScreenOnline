@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+    <script type="text/javascript" src="static/lib/vanilla-picker.js"></script>
+    <title>Greenscreen Remover</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">    
+            <div class="header-block">
+                <img src="static/source/catplusexplosion.png" alt="" class="header-block__logo">
+                <div class="header-block__name">Greenscreen Remover</div>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <section class="section grey">
+            <div class="container">
+                <div class="main">
+                    <div class="main-block">
+                        <h1 class="main-block__h1">Хочешь сделать прикольный видос, используя гринскрин эффекты?</h1>
+                        <p class="main-block__desc">Бро, да ты по адресу!</p>
+                        <a class="main-block__button" href="https://ru.wikipedia.org/wiki/Реверсивная_психология">Не нажимай на эту кнопку</a>
+                        <p class="main-block__desc">Просто выбираешь основное видео,<br>затем выбираешь эффект,<br>нажимаешь на кнопку<br>и наслаждаешься результатом.</p>
+                    </div>
+                    <div class="main-block end">
+                        <img src="static/source/catplusexplosion.png" alt="" class="main-block__image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <h2 class="section__title">
+                    Попробуйте прямо сейчас!
+                </h2>
+                <div class="app" id="app_start">
+                    <div class="app__stages">
+                        <div class="app__stages__stage">
+                            <h3 class="app__stage__title">
+                                <span class="app__stage__title__num">
+                                    Шаг 1.
+                                </span>
+                                Загрузите основное видео
+                            </h3>
+                            <div class="app__stage__preview">
+                                <video class="app__stage__preview__video" controls style="display: none;">
+                                    <source src="" id="base-video-preview">
+                                </video>
+                            </div>
+                            <div class="inputRepeater">
+                                <input type="file" class="inputRepeater__videoInput" id="base_video">
+                                <label for="base_video" class="inputRepeater__inputLabel">Выбрать файл...</label>
+                            </div>
+                        </div>
+                        <div class="app__stages__stage">
+                            <h3 class="app__stage__title">
+                                <span class="app__stage__title__num">
+                                    Шаг 2.
+                                </span>
+                                Загрузите взрыв
+                            </h3>
+                            <div class="app__stage__preview">
+                                <video class="app__stage__preview__video" controls style="display: none;">
+                                    <source src="" id="overlay-video-preview">
+                                </video>
+                            </div>
+                            <div class="inputRepeater">
+                                <input type="color" id="overlay_color" value="#00ff00" class="inputRepeater__colorInput">
+                                <label for="overlay_color" class="inputRepeater__inputLabel">Цвет хромакея...</label>
+                            </div>
+                            <div class="inputRepeater">
+                                <input type="file" class="inputRepeater__videoInput" id="overlay_video">
+                                <label for="overlay_video" class="inputRepeater__inputLabel">Выбрать файл...</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container__actions">
+                        <button id="start_processing" class="container__actions__main">
+                            Запустить
+                        </button>
+                    </div>
+                </div>
+                <div class="app" id="app_pending" style="display: none">
+                    Пагади, я думаю. Артём, сделай тут анимацию загрузки...
+                </div>
+                <div class="app" id="app_result" style="display: none;">
+                    <div class="app__stages">
+                        <div class="app__stages__stage">
+                            <h3 class="app__stage__title">
+                                Ваше видео готово
+                            </h3>
+                            <p style="text-align: center;">
+                                Чтобы скачать его, бла-бла бла...
+                            </p>
+                            <div class="app__stage__preview">
+                                <video class="app__stage__preview__video" controls>
+                                    <source src="" id="output-video-preview">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        
+    </footer>
+
+    <script type="text/javascript" src="static/index.js"></script>
+</body>
+</html>
