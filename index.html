@@ -23,7 +23,7 @@
             <div class="container">
                 <div class="main">
                     <div class="main-block">
-                        <h1 class="main-block__h1">Хочешь сделать прикольный видос, используя гринскрин эффекты?</h1>
+                        <h1 class="main-block__h1">Хочешь сделать прикольный видос, используя хромакей эффекты?</h1>
                         <p class="main-block__desc">Бро, да ты по адресу!</p>
                         <a class="main-block__button" href="https://ru.wikipedia.org/wiki/Реверсивная_психология">Не нажимай на эту кнопку</a>
                         <p class="main-block__desc">Просто выбираешь основное видео,<br>затем выбираешь эффект,<br>нажимаешь на кнопку<br>и наслаждаешься результатом.</p>
@@ -37,7 +37,8 @@
         <section class="section">
             <div class="container">
                 <h2 class="section__title">
-                    Попробуйте прямо сейчас!
+                    Попробуйте прямо сейчас!<br>
+                    ___
                 </h2>
                 <div class="app" id="app_start">
                     <div class="app__stages">
@@ -82,12 +83,15 @@
                     </div>
                     <div class="container__actions">
                         <button id="start_processing" class="container__actions__main">
-                            Запустить
+                                Запустить
                         </button>
                     </div>
                 </div>
                 <div class="app" id="app_pending" style="display: none">
-                    Пагади, я думаю. Артём, сделай тут анимацию загрузки...
+                    <div style="display: flex; align-items: center; column-gap: 1rem;">
+                        <img src="static/source/cat-gato.gif" alt="" class="app__loading">
+                        <div class="app_pending">Загрузка...</div>
+                    </div>
                 </div>
                 <div class="app" id="app_result" style="display: none;">
                     <div class="app__stages">
@@ -95,8 +99,8 @@
                             <h3 class="app__stage__title">
                                 Ваше видео готово
                             </h3>
-                            <p style="text-align: center;">
-                                Чтобы скачать его, бла-бла бла...
+                            <p style="text-align: center; padding-bottom: 2rem;">
+                                Чтобы скачать его, бла-бла бла...<br>Да как будто сам не знаешь...
                             </p>
                             <div class="app__stage__preview">
                                 <video class="app__stage__preview__video" controls>
@@ -109,10 +113,6 @@
             </div>
         </section>
     </div>
-    <footer class="footer">
-        
-    </footer>
-
     <script type="text/javascript" src="static/index.js"></script>
 </body>
 </html>

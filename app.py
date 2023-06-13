@@ -22,6 +22,13 @@ queue_handler.start()
 auto_cleanup.start()
 
 
+@app.after_request
+def after_rq(response):
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT'
+    return response
+
+
 @app.route("/robots.txt")
 def robots():
     return flask.send_file("static/robots.txt")
@@ -29,14 +36,10 @@ def robots():
 
 @app.route("/")
 def index_page():
+    """
+    Возвращает основной HTML-файл
+    """
     return flask.send_file("index.html")
-
-
-@app.after_request
-def after_rq(response):
-    response.headers['Access-Control-Allow-Origin'] = '*'
-    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT'
-    return response
 
 
 @app.route("/api/requests", methods=["PUT"])
