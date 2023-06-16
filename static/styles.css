@@ -21,7 +21,7 @@
   html,body{
       height: 100%;
       width: 100%;
-      min-width: 1470px;
+      min-width: none;
       font-size: 100%;
       line-height: 1.25;
       font-size: 100%;
@@ -60,8 +60,9 @@
   }
 
   .container{
+    width: 100%;
     max-width: 1330px;
-    margin: 0 auto;
+    margin: auto;
     padding: 0 1rem 0 1rem;
   }
 
@@ -138,7 +139,6 @@
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.062);
     border: 1px solid rgba(0, 0, 0, 0.13);
-    border-radius: 5px;
     transition: all 0.25s;
   }
 
@@ -147,7 +147,7 @@
   }
 
   .main-block__image{
-    max-width: 512px;
+    max-width: 90%;
   }
 
   .inputRepeater{
@@ -169,7 +169,6 @@
     font-size: 1rem;
     background-color: rgba(0, 0, 0, 0.062);
     border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
     padding: 1.5rem 2rem 1.5rem 2rem;
     transition: all 0.25s;
   }
@@ -189,8 +188,7 @@
   .app__stages {
     display: flex;
     gap: 12px;
-    padding-bottom: 3em;
-    padding-top: 3em;
+    padding: 3rem 1rem 3rem 1rem;
     background-color: rgb(247, 247, 247);
     border: 1px solid rgba(0, 0, 0, 0.167);
   }
@@ -215,7 +213,6 @@
   }
 
   .app__stage__preview {
-    border-radius: 12px;
     background-color: #eee;
     max-width: 100%;
     max-width: min(500px, 100%);
@@ -230,4 +227,29 @@
 
 .picker_wrapper.layout_default {
   background: var(--theme);
+}
+
+@media (max-width:768px) {
+
+    .main-block{
+    width: 100%;
+    }
+
+    .main{
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .end{
+      max-width: 75%;
+      align-items: center;
+    }
+}
+
+@media (max-width:626px) {
+
+  .app__stages{
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
 }
